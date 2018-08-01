@@ -1,5 +1,5 @@
 # Nodepop
-Power By
+### Power By
 [![N|Solid](https://divioag2017-live-e9fe0b8244c24280878375-8ae4759.divio-media.net/filer_public_thumbnails/filer_public/c6/bf/c6bf8cc8-22cc-44ff-a142-bb1201a27617/nodejs-logo-small.png__800x450_q90_crop_subsampling-2.png)](https://nodejs.org/es/)
 
 Nodepop es un ejemplo de api-rest-full. (Proyecto practica ejemplo de Api con MongoDB)
@@ -23,8 +23,8 @@ NodePop usa las siguientes tecnologías:
 * [node.js] - evented I/O for the backend
 * [Express] - fast node.js network app framework [@tjholowaychuk]
 
-Código disponible en [repositorio][nodepop] on GitHub.
-Generado con: [dillinger]
+	- Código disponible en [repositorio][nodepop] on GitHub.
+	- readme.md generado con: [dillinger]
 
 ### Installation
 
