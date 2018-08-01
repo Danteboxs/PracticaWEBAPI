@@ -20,10 +20,10 @@ Nodepop es un ejemplo de api-rest-full. (Proyecto practica ejemplo de Api con Mo
 
 NodePop usa las siguientes tecnologías:
 
-* [node.js] - evented I/O for the backend.
-* [Express] - fast node.js network app framework.
-* [express-generator] -  generador de aplicaciones para Express.
-* [mongoosejs] - realizar operaciones con un modelo de datos de MongoDB.
+* [node.js] - evented I/O for the backend
+* [Express] - fast node.js network app framework
+* [express-generator] -  generador de aplicaciones para Express
+* [mongoosejs] - realizar operaciones con un modelo de datos de MongoDB
 
 ### Anexo
 * Código disponible en [repositorio][nodepop] on GitHub.
@@ -136,12 +136,10 @@ GNU General Public License v3.0
 **Free Software, Hell Yeah!**
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-
    [danteboxs]: <https://github.com/Danteboxs/>
    [nodepop]: <https://github.com/Danteboxs/PracticaWEBAPI>
    [dillinger]: <https://dillinger.io/>
    [express]: <http://expressjs.com>
    [node.js]: <http://nodejs.org>
-   [express-generator] : <http://expressjs.com/es/starter/generator.html>
-   [mongoosejs] : <http://mongoosejs.com/>
+   [express-generator]: <http://expressjs.com/es/starter/generator.html>
+   [mongoosejs]: <http://mongoosejs.com/>
