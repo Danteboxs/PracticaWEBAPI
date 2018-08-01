@@ -23,8 +23,9 @@ NodePop usa las siguientes tecnologías:
 * [node.js] - evented I/O for the backend
 * [Express] - fast node.js network app framework [@tjholowaychuk]
 
-	- Código disponible en [repositorio][nodepop] on GitHub.
-	- readme.md generado con: [dillinger]
+### Anexo
+* Código disponible en [repositorio][nodepop] on GitHub.
+* readme.md generado con: [dillinger]
 
 ### Installation
 
