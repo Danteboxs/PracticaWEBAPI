@@ -33,13 +33,14 @@ NodePop usa las siguientes tecnologías:
 
 Nodepop requiere [Node.js](https://nodejs.org/) v8+ para ejecutarse.
 
-Instalar las dependencias y las devDependencies, arrancar el servidor.
+Instalar las dependencias y las devDependencies, carga de datos, arrancar el servidor.
 ```sh
 $ clonamos el repositorio -> https://github.com/Danteboxs/PracticaWEBAPI.git
 $ cd nodepop
 $ set NODE_ENV=development (para windows)
 $ npm install -d (para instalar tambien dependencias de developer)
-$ node run dev
+$ npm run install_db (para la carga de datos, opcional si ya tenemos y existe la BD)
+$ node run dev (ejecucion de la aplicacion)
 ```
 
 For production environments...
