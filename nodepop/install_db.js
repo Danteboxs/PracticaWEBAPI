@@ -17,10 +17,12 @@ conn.once('open', async () => {
       process.exit();
     }
     await initAnuncios(anuncios);
+    //salida normal
     process.exit();
 
   } catch (err) {
     console.log('error al realizar la carga incial de datos', err);
+    //salida forzada por si acaso.
     process.exit(1);
   }
 });
@@ -41,6 +43,10 @@ function askUser(question) {
   });
 }
 
+// No tengo claro que sea la forma mas correcta de hacerlo. Cuando termina correctamente la promesa de mongoose, 
+// ejecuto una funcion que muestra el mensaje de los borrados y despues llamo a la inserccion, y si es correcto 
+// muestro el mensaje de los insertados. No capturo ningun error ya que se recoge cuando se ejecuta la llamada
+// a la funcion.
 async function initAnuncios(anuncios) {
   // eliminar los anuncios actuales
   await Anuncio.deleteMany().then(async function(result){
