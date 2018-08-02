@@ -10,7 +10,7 @@ const Anuncio = require('./models/Anuncio');
 
 conn.once('open', async () => {
   try {
-    const response = await askUser('¿Borrar contenido actual de la BD? (si/no)');
+    const response = await askUser('¿Borrar contenido actual de la BD? (si/no)\n');
 
     if (response.toLowerCase() !== 'si') {
       console.log('No se realiza carga de datos');
@@ -43,11 +43,11 @@ function askUser(question) {
 
 async function initAnuncios(anuncios) {
   // eliminar los anuncios actuales
-  const deleted = await Anuncio.deleteMany().then(async function(deleted){
-    console.log(`Eliminados ${deleted.n} anuncios.`);
+  await Anuncio.deleteMany().then(async function(result){
+    console.log(`Eliminados ${result.n} anuncios.`);
     // inserta los anuncios actuales
-    const inserted = await Anuncio.insertMany(anuncios).then(async function(inserted){
-      console.log(`Insertados ${inserted.length} anuncios.`);    
+    await Anuncio.insertMany(anuncios).then(async function(result){
+      console.log(`Insertados ${result.length} anuncios.`);    
     });
   });
 }
