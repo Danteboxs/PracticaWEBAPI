@@ -43,10 +43,11 @@ function askUser(question) {
 
 async function initAnuncios(anuncios) {
   // eliminar los anuncios actuales
-  const deleted = await Anuncio.deleteMany();
-  console.log(`Eliminados ${deleted.n} anuncios.`);
-
-  // cargamos datos inciales de anuncios
-  const inserted = await Anuncio.insertMany(anuncios);
-  console.log(`Insertados ${inserted.length} anuncios.`);
+  const deleted = await Anuncio.deleteMany().then(async function(deleted){
+    console.log(`Eliminados ${deleted.n} anuncios.`);
+    // inserta los anuncios actuales
+    const inserted = await Anuncio.insertMany(anuncios).then(async function(inserted){
+      console.log(`Insertados ${inserted.length} anuncios.`);    
+    });
+  });
 }
