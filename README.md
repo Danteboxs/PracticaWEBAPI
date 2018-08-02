@@ -31,14 +31,15 @@ NodePop usa las siguientes tecnologías:
 
 ### Installation
 
-Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
+Nodepop requiere [Node.js](https://nodejs.org/) v8+ para ejecutarse.
 
-Install the dependencies and devDependencies and start the server.
-
+Instalar las dependencias y las devDependencies, arrancar el servidor.
 ```sh
-$ cd dillinger
-$ npm install -d
-$ node app
+$ clonamos el repositorio -> https://github.com/Danteboxs/PracticaWEBAPI.git
+$ cd nodepop
+$ set NODE_ENV=development (para windows)
+$ npm install -d (para instalar tambien dependencias de developer)
+$ node run dev
 ```
 
 For production environments...
