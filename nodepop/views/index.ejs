@@ -9,6 +9,8 @@
     <p>Welcome to <%= title %></p>
 
     <h3>Datos devueltos api: </h3>
-      <p><%= datos %></p>
+      <% datos.forEach(function(dato) { %>
+        <p><%= dato.nombre + ' ' + dato.venta + ' ' + dato.precio + ' ' + dato.foto + ' ' + dato.tags%></p>
+      <% }) %>
   </body>
 </html>
