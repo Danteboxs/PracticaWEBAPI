@@ -16,8 +16,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//para leer ficheros de configuracion .env
+require('dotenv').config();
+
+/**
+ * Conectamos a la base de datos y registramos los modelos
+ */
+require('./lib/connectionBD');
+require('./models/Anuncio');
+
+app.use('/apiv1/anuncios', require('./routes/apiv1/anuncios'));
+
 app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/users'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

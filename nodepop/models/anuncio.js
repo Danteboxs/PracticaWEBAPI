@@ -11,13 +11,9 @@ const anuncioSchema = mongoose.Schema({
     tags: [String]
 });
 
-// creamos un método estático para pasar parametros al modelo
-anuncioSchema.statics.listar = function(filtro, limit, skip, fields, sort) {
-  const query = Anuncio.find(filtro);
-  query.limit(limit);
-  query.skip(skip);
-  query.select(fields);
-  query.sort(sort);
+// creamos un método estático simple sin parametros para la apiv1
+anuncioSchema.statics.listar = function() {
+  const query = Anuncio.find();
   return query.exec();
 }
 
