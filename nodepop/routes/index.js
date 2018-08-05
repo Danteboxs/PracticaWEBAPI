@@ -5,17 +5,19 @@ var datosGlobal = {};
 const Anuncio = require('../models/Anuncio');
 
 function datosDevueltos() {
-  Anuncio.find(function (err, docs) {
+  return Anuncio.find(function (err, docs) {
     datosGlobal =  docs;
   }).exec();
 }
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  datosDevueltos();
-  res.render('index', { 
-    title: 'NodePop',
-    datos: datosGlobal
+  datosDevueltos().then(function (doc) {
+    datosGlobal = doc;
+    res.render('index', { 
+      title: 'NodePop',
+      datos: datosGlobal
+    });
   });
 });
 
